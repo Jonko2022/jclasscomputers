@@ -1,0 +1,140 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:borer-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background:#462121;
+  color: white;
+  padding-bottom: 70px;
+  margin-bottom: 20px;
+}
+#header{
+background-color:#462121;
+width: 100%;
+}
+.container{
+  padding:10px 10px;
+}
+nav{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo{
+  width:100px;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin:10px 10px;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  position:relative;
+}
+nav ul li a::after{
+  content:'';
+  width:0;
+  height:2px;
+  background: #ff004f;
+  position: absolute;
+  left:0;
+  bottom:-6px;
+  transition: 0.4s;
+}
+nav ul li a:hover::after{
+  width:100%;
+}
+.footer{
+  background-color: #eaafaf;
+  text-align: center;
+  position: fixed;
+  bottom:0px;
+  width:100%;
+  height:fit-content;
+  font-size:20px;
+  margin:0px;
+  display:grid;
+  grid-template-columns: 1fr 1r 1fr;
+}
+.contact-details{
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact-left{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+}
+.contact-left-title h2{
+  font-weight: bold;
+  color:rgb(247, 247, 240);
+  font-size: 25px;
+}
+  .contact-left-title hr{
+    height:1px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+  }
+.contact-inputs{
+  width:300px;
+  height:50px;
+  border:none;
+  outline:none;
+  padding-left:25px;
+  font-size:20px;
+  color:#665;
+  border-radius: 10px;
+}
+.contact-left textarea{
+  height: 150px;
+  border-radius: 10px;
+  padding-top: 20px;
+}
+.contact-inputs:hover{
+  border:1px solid #ff004f;
+}
+.contact-inputs:focus{
+  border:1px solid #3953c7;
+  color:#080808;
+}
+.contact-inputs::placeholder{
+  color:#eaafaf;
+  font-size:20px;
+}
+.contact-left button{
+  display:flex;
+  align-items:center;
+  padding:15px 30px;
+  font-size:25px;
+  color:#f3e4e4;
+  gap:10px;
+  border:none;
+  border-radius:30px;
+  cursor: pointer;
+  background-color: #3953c7;
+}
+.contact-left button:hover{
+  background-color: #665;
+  transition: 0.5s;
+  color: rgb(243, 243, 236);
+}
+.contact-right img{
+  width:500px;
+
+}
+@media (max-width:800px){
+  .contact-inputs{
+    width:80vh;
+  }
+  .contact-right{
+    display:none;
+  }
+}
