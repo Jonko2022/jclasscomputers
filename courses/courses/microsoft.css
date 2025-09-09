@@ -1,0 +1,233 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:borer-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background:#f89f9f;
+  color: rgb(68, 49, 49);
+  padding-bottom: 70px;
+  margin-bottom: 20px;
+}
+#header{
+background-color:#f1cfcf;
+width: 100%;
+height:auto;
+background-size:cover;
+background-position:top;
+}
+.container{
+  padding:5px 10px;
+  top:0px;
+  position:fixed;
+  display: flex;
+  width: 100%;
+  background: #ff004f;
+}
+
+.course-header{
+  font-size: 20px;
+  color: #2575fc;
+  padding: 10px 0;
+  text-align: center;
+  margin-top:120px;
+}
+.courses-page{
+  font-size: 18px;
+  color: #2575fc;
+  padding: 10px 0;
+  text-align: center;
+  margin-top:10px;
+}
+
+nav{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo{
+  width:100px;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  transition: max-height 0.3s;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin:10px 10px;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  position:relative;
+}
+nav ul li a::after{
+  content:'';
+  width:0;
+  height:2px;
+  background: #ff004f;
+  position: absolute;
+  left:0;
+  bottom:-6px;
+  transition: 0.4s;
+}
+nav ul li a:hover::after{
+  width:100%;
+}
+
+.lesson-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 0px 0;
+}
+
+.lesson_outline p {
+  margin-bottom: 16px;
+}
+
+.sidebar {
+  position: fixed; /* Makes the sidebar stay in a fixed position relative to the viewport */
+  top: 120px;          /* Positions the sidebar at the top of the viewport */
+  left: 0;         /* Positions the sidebar at the left of the viewport */
+  width: 200px;    /* Sets a specific width for the sidebar */
+  height: calc(100vh - 100px);   /* Makes the sidebar span the full height of the viewport */
+  background-color: #f0f0f0; /* Example background color */
+  overflow-y: auto; /* Adds a scrollbar if content exceeds sidebar height */
+  padding: 10px; /* Adds some padding inside the sidebar */
+  margin-top:0px;
+  border-radius: 4px;
+    }
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 5px;
+}
+
+.sidebar ul li {
+  margin-bottom: 16px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+  color: #0078d4;
+}
+
+.lesson-content {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  display:flex;
+  margin: 5px;
+}
+
+.lesson-content ol{
+  margin: 10px 0;
+  padding: 5px 20px;
+}
+
+.lesson-layout .lesson-content {
+  grid-column: 2;
+  margin: 5px;
+  height: auto;
+  background: #fff;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.lesson-layout .lesson-content p {
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.lesson-layout .lesson-content h4 {
+  margin-top: 5px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 20px;
+  color: #2575fc;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 8px 12px;
+}
+
+@media (max-width: 800px) {
+  .hamburger {
+    display: inline-block;
+  }
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(40,60,120,0.10);
+    border-radius: 10px;
+    width: 180px;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.3s;
+  }
+  nav ul.show {
+    max-height: 400px;
+    padding: 12px 0;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    color: #2575fc;
+    border-radius: 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  .lesson-layout .lesson-content {
+  grid-column: 1;
+  margin-left:120px;
+  height: auto;
+  background: #fff;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+}
+}
