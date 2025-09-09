@@ -71,5 +71,17 @@
 
 </div>
 </footer>
+<script>
+  // Select all course buttons
+  document.querySelectorAll('.buttons').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      if(localStorage.getItem('signedIn') !== 'true') {
+        e.preventDefault();
+        window.location.href = "signin.html";
+      }
+      // If signed in, allow normal navigation
+    });
+  });
+</script>
 </body>
 </html>
